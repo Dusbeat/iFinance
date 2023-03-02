@@ -46,7 +46,12 @@ Importante ressaltar que o "t_number" é um "ID de Transação" único para cada
   Como o Valor das Receitas e Despesas do usuário eram armazenadas no Banco de Dados já formatado como moeda, para fazer a soma de todas as despesas e todas as receitas
   eu iria precisar converter o valor de Monetário para Número Inteiro removendo tanto "R$" quanto as outras acentuações para fazer a soma e depois retornar esse valor em
   formato Monetário novamente na tela do usuário.
-  Para chegar a esse Resultado
+  Para chegar a esse Resultado utilizei da seguinte lógica:
+  #
+  ![image](https://user-images.githubusercontent.com/91026386/222460083-4a56abb2-b2e4-42c7-a683-a45a40ae83f2.png)
+  #
+  
+  Utilizei um laço de repetição para descobrir quantas receitas foram geradas no banco de dados no registro daquele usuário, como o valor é retornado em lista utilizei
+  o "n = i[4]" para selecionar somente o campo "Valor" da resposta do query, utilizei o "n = n[3:-3]" para remover o "R$" e utilizei o "n = int(re.sub(r'[,.]', '', n))" para remover os caracteres especiais da variável, e logo após transformar em um número inteiro para que eu pudesse fazer a soma e armazenar em "soma_despesa".
+  No final utilizo o Locale para transformar o número inteiro em uma String como Valor Monetário formatado em BRL para exibir na tela do usuário.
 
-#### Editar, Excluir Receitas e Despesas:
-  Quando adicionei a função de mostrar todas 
