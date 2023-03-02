@@ -18,14 +18,13 @@ https://www.youtube.com/watch?v=Md1Ua2bsfFQ&ab_channel=LuisFelipeBarbosa
   - Psycopg2 : Para fazer a conexão do Banco de Dados entre o Código e o PostgreSQL
   - Locale: Para converter os valores INTEIROS para Formatação de Moeda BRL
 
-### Propósito do Projeto:
+## Resumo do Projeto:
 Projeto desenvolvido como etapa final do curso "CS50 - Introduction to Science Computer" de Harvard.
 Consiste em uma Aplicação WEB de Gerenciamento Financeiro no qual o usuário final pode:
   - Adicionar, Editar e Excluir Receitas Monetárias
   - Adicionar, Editar e Excluir Despesas
   - Ter um Resumo do seu saldo baseado em suas Receitas + Despesas
   
-### Resumo do Projeto:
 #### SQL:
 Foi criado 3 tabelas no Banco de Dados para armazenar todas as informações.
 
@@ -36,7 +35,7 @@ ID Primary Key, Nome, Sobrenome, Email e Senha.
 T_number: Primary Key, ID, Data, Descrição, Valor.
 
 - Despesas:
-- T_number, ID, Data, Descrição e Valor.
+ T_number, ID, Data, Descrição e Valor.
 
 Importante ressaltar que o "t_number" é um "ID de Transação" único para cada transação adicionado ao Database, dessa forma sempre que for feito uma alteração ou exclusão de dados por parte do Usuário, a aplicação usa o "t_number" como referência da transação alvo de alteração, dessa forma evita que afete outros dados cadastrados.
   
