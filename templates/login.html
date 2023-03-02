@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Iniciar Sessão
+{% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="static/login.css">
+{% endblock %}
+
+{% block main %} 
+
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça o Login: <br> E seja bem-vindo!</h1>
+            <img src="static/images/login.svg" class="left-login-image" alt="animacao">
+
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Iniciar Sessão:</h1>
+                <form action="/login", method="post">
+                    <div class="textfield">
+                        <!-- Campo para inserir Nome de Usuário -->
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" placeholder="Seu endereço de email">
+
+                        <!-- Campo para inserir Senha -->
+                        <label for="password">Senha:</label>
+                        <input type="password" name="password" placeholder="Sua Senha">
+                    </div>
+                    <button class="btn-login" type="submit">Iniciar Sessão</button>
+
+                </form>
+            
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Iniciar Sessão
+{% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="static/editar_receita.css">
+{% endblock %}
+
+{% block main %} 
+    <link rel="stylesheet" href="static/editar_receita.css">
+    <div class="textfield-receita">
+        <h1>Editar Despesa:</h1>
+        <form class="form-receita" action="/despesas/update/{{despesas[0] }}", method="post">
+            <label for="description">Descrição</label>
+            <input class="input-receita" type="text" name="description" value='{{ despesas[3] }}'>
+
+            <label for="valor">Valor</label>
+            <input class="input-receita" type="number" name="valor" value='{{ valor_despesa }}'>
+
+            <button type="submit">Finalizar Edição</button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+iFinance: Sistema de Gerenciamento de Finanças
+
+Funções:
+    - Criar Receitas
+    - Criar Despesas
+    - Editar Receitas
+    - Editar Despesas
+    - Excluir Receitas
+    - Excluir Despesas
+
+Tecnologias:
+    Front-End:
+        - CSS
+        - HTML5
+        - Bootstrap
+    
+    Back-End:
+        - Python
+        - Flask
+    
+    SQL:
+        - PostgreSQL
+
+
+Código Desenvolvido por Luis Felipe Barbosa @2023
+

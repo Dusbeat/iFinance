@@ -1,0 +1,143 @@
+{% extends "template.html" %}
+
+{% block title %} 
+    Painel
+{% endblock %} 
+
+{% block main %}
+    <link rel="stylesheet" href="/static/index.css"> 
+    <div class="main-painel">
+        <div class="receitas">
+
+            <!-- Tabela de Receitas -->
+            <h1>Receitas:</h1>
+            <h3>R$ {{ soma_receita }}</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody >
+                    {% for receita in receitas %}
+                        <tr>
+                            <td>{{ receita[2].strftime('%d/%m/%Y')}}</td>
+                            <td>{{ receita[3] }}</td>
+                            <td>{{ receita[4] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="despesa">
+
+            <!-- Tabela de Receitas -->
+            <h1>Despesas:</h1>
+            <h3>R$ {{ soma_despesa }}</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody >
+                    {% for despesa in despesas %}
+                        <tr>
+                            <td>{{ despesa[2].strftime('%d/%m/%Y') }}</td>
+                            <td>{{ despesa[3] }}</td>
+                            <td>{{ despesa[4] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div class="grid">
+            <div class="resumo-receita">
+
+                <!-- Tabela de Receitas -->
+                <h1>Adicionar Receita:</h1>
+                
+                <div class="add-receita">
+                    <div class="textfield">
+                        <form class="form", action="/" method="post">
+                            <label for="receita"> Valor:</label>
+                            <input type="number" name="valor-receita" placeholder="Insira o Valor da Receita">
+
+                            <label for="despesa"> Descrição:</label>
+                            <input type="text" name="descricao-receita" placeholder="Insira a Descrição da Receita">
+
+                            <label for="data">Data:</label>
+                            <input type="date" name="data-receita">
+
+                            <button class="btn-receita" type="submit">Adicionar Receita</button>
+                        </form>
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+
+            <div class="resumo-despesa">
+
+                <!-- Tabela de Receitas -->
+                <h1>Adicionar Despesa:</h1>
+                
+                <div class="add-receita">
+                    <div class="textfield">
+                        <form class="form", action="/", method="post">
+                            <label for="receita"> Valor:</label>
+                            <input type="number" name="valor-despesa" placeholder="Insira o Valor da Despesa">
+
+                            <label for="despesa"> Descrição:</label>
+                            <input type="text" name="descricao-despesa" placeholder="Insira a Descrição da Despesa">
+                            
+                            <label for="data">Data:</label>
+                            <input type="date" name="data-despesa">
+
+                            <button class="btn-despesa" type="submit">Adicionar Despesa</button>
+                        </form>
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="resumo">
+
+            <!-- Tabela de Receitas -->
+            <h1>Resumo:</h1>
+            
+            <div class="resumo-div">
+                <h5>Saldo Atual:</h5>
+                <h5>R$ {{ saldo }}</h5>
+            </div>
+
+            <div class="resumo-div">
+                <h5>Despesa Total:</h5>
+                <h5 class="valor-despesa">R$ {{ soma_despesa }}</h5>
+            </div>
+
+            <div class="resumo-div">
+                <h5>Receita Total:</h5>
+                <h5 class="valor-receita">R$ {{ soma_receita }}</h5>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

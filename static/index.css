@@ -1,0 +1,207 @@
+.receitas {
+    margin-top: 30px;
+    max-width: 500px;
+    min-width: 350px;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px #00000056;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+
+.receitas > h1 {
+    color: rgb(9, 122, 85);
+    text-shadow: 0px 10px 40px #00000056;
+}
+
+.receitas > h3 {
+    color: rgb(80, 191, 154);
+    text-shadow: 0px 10px 40px #00000056;
+    
+}
+
+.despesa {
+    margin-top: 30px;
+    max-width: 500px;
+    min-width: 350px;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px #00000056;
+    padding: 15px;
+    margin-right: 20px;
+    
+}
+
+.despesa > h1{
+    color: rgb(182, 6, 6);
+    text-shadow: 0px 10px 40px #00000056;
+}
+
+.despesa > h3{
+    color: red;
+    text-shadow: 0px 10px 40px #00000056;
+}
+
+.resumo-receita {
+    margin-top: 30px;
+    max-width: 300px;
+    max-height: 40vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px #00000056;
+    padding: 15px;
+}
+
+.resumo-despesa {
+    margin-top: 20px;
+    max-width: 300px;
+    max-height: 40vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px #00000056;
+    padding: 15px;
+}
+
+
+.resumo-receita > h1{
+    font-size: 20px;
+    margin-bottom: -20px;
+    margin-top: -10px;
+}
+
+.resumo-despesa > h1{
+    font-size: 20px;
+    margin-bottom: -20px;
+    margin-top: -10px;
+}
+
+
+/* .textfield {
+    display: flex;
+    flex-direction: column;
+}
+
+.textfield > label {
+    font-weight: 500;
+    margin-top: 10px;
+} */
+
+td {
+    font-size: 12px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form> label {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+input {
+    margin-top: -10px;
+    border-radius: 10px;
+    text-align: center;
+    
+    box-sizing: border-box;
+    box-shadow: 0px 3px 15px 0.5px #00000056;
+    font-size: 12px;
+    padding: 3px;
+    
+}
+
+label {
+    font-size: 12px;
+}
+
+.btn-receita {
+    margin-top: 15px;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #88e7b3;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 15px 0.5px #00000056;
+    font-weight: 500;
+    font-size: 14px;   
+}
+
+.btn-despesa{
+    margin-top: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #bd0202;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 15px 0.5px #00000056;
+    font-weight: 500;
+    font-size: 13px;  
+}
+.add-receita {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.add-despesa {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.add-receita > h5 {
+    text-shadow: 0px 3px 15px 0.5px #00000056;
+    text-transform: uppercase;
+}
+
+.table{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.main-painel {
+    display: flex;
+    flex-direction: row;
+}
+
+.valor-despesa {
+    color: red;
+}
+
+.valor-receita{
+    color: rgb(80, 191, 154);
+}
+
+
+.resumo {
+    margin-top: 30px;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px #00000056;
+    padding: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+}
+
+.resumo-div {
+    padding: 20px;
+}

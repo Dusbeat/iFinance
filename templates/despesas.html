@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+
+{% block title %} 
+    Receitas
+{% endblock %} 
+
+{% block main %}
+    <link rel="stylesheet" href="/static/receitas.css">    
+    <div class="main-table">
+        <h1>Receitas</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for despesa in despesas %} 
+                    <tr>
+                        <td>{{ despesa[2].strftime('%d/%m/%Y')}}</td>
+                        <td>{{ despesa[3] }}</td>
+                        <td>{{ despesa[4] }}</td>
+
+                        <form action="/despesas/update/{{ despesa[0] }}", method="get">
+                            <td><button class="btn-update" type="submit">Editar</button></td>
+                        </form>
+
+                        <form action="/despesas/delete/{{ despesa[0] }}", method="post">
+                            <td><button class="btn-delete" type="submit">Excluir</button></td>  
+                        </form>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

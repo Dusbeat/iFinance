@@ -1,0 +1,52 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Registro
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="static/register.css">
+{% endblock %}
+
+{% block main %} 
+<div class="container-box">
+    <div class="row">
+        <div class="col">
+            <img src="static/images/register.svg" class="form-image"> 
+        </div>
+        <div class="col">
+            <form action="/register" method="post">
+                <div class="textfield">
+                    <h1>Criar uma nova conta.</h1>
+                    <div class="input-box">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" name="nome" placeholder="Seu Nome">
+                    </div>
+                    <div class="input-box">
+                        <label for="sobrenome">Seu Sobrenome:</label>
+                        <input type="text" name="sobrenome" placeholder="Seu Sobrenome">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Seu Email:</label>
+                        <input type="email" name="email" placeholder="Seu Email">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Confirmar Email:</label>
+                        <input type="email" name="email-confirm" placeholder="Digite novamente o Email">
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Digite uma Senha:</label>
+                        <input type="password" name="password" placeholder="Insira uma Senha">
+                    </div>
+                    <div class="input-box">
+                        <label for="password-confirm">Confirmar Senha:</label>
+                        <input type="password" name="password-confirm" placeholder="Digite a senha novamente">
+                    </div>
+                    <button class="btn-register" type="submit">Concluir Cadastro</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
