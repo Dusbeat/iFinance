@@ -25,7 +25,7 @@ Consiste em uma Aplicação WEB de Gerenciamento Financeiro no qual o usuário f
   - Adicionar, Editar e Excluir Despesas
   - Ter um Resumo do seu saldo baseado em suas Receitas + Despesas
   
-#### SQL:
+## SQL:
 Foi criado 3 tabelas no Banco de Dados para armazenar todas as informações.
 
 - Usuarios:
@@ -38,6 +38,32 @@ T_number: Primary Key, ID, Data, Descrição, Valor.
  T_number, ID, Data, Descrição e Valor.
 
 Importante ressaltar que o "t_number" é um "ID de Transação" único para cada transação adicionado ao Database, dessa forma sempre que for feito uma alteração ou exclusão de dados por parte do Usuário, a aplicação usa o "t_number" como referência da transação alvo de alteração, dessa forma evita que afete outros dados cadastrados.
+
+## Páginas:
+
+### /login :
+ #### "GET":
+  Apenas imprime a página "login.html" na tela do usuário.
+  
+#### "POST":
+  Recebe os valores de "Email" e "Senha" efetuando uma pesquisa no Banco de Dados para verificar se o Usuário Existe ou se as informações estão corretas.
+  Caso ao contrário retorna um pop-up de alerta com a mensagem do erro.
+  
+### /register :
+ #### "GET":
+  Apenas imprime a página "register.html" na tela do usuário.
+  
+ #### "POST" :
+  Recebe os valores inseridos em todos os campos de entrada de dados e armazena em variáveis, iniciando uma verificação de campos para se certificar que todos 
+  os campos foram preenchidos e faz uma pesquisa no banco de dados para verificar se o usuário já está registrado.
+  Caso passe em todas as verificações, é criado um novo registro para o usuário no banco de dados anexando um ID único ao mesmo.
+
+### / :
+ #### "GET":
+  Faz uma busca completa no banco de dados para descobrir todas as Receitas, Despesas e Saldo do Usuário para retornar o valor como texto para o Front-End.
+ #### "POST":  
+  Endpoint para quando o usuário criar uma Nova Receita ou uma Nova Despesa clicando no botão da página. Recebe como a entrada do usuário o Valor, Data e Descrição    da transação logo após insere os novos dados no banco de dados.
+  
   
 ## Dificuldades no Projeto:
 
