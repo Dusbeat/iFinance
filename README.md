@@ -63,6 +63,30 @@ Importante ressaltar que o "t_number" é um "ID de Transação" único para cada
   Faz uma busca completa no banco de dados para descobrir todas as Receitas, Despesas e Saldo do Usuário para retornar o valor como texto para o Front-End.
  #### "POST":  
   Endpoint para quando o usuário criar uma Nova Receita ou uma Nova Despesa clicando no botão da página. Recebe como a entrada do usuário o Valor, Data e Descrição    da transação logo após insere os novos dados no banco de dados.
+
+### /receitas :
+ #### "GET":
+  Executa uma busca no banco de dados de todas as transações no formado de Receitas ligadas ao ID do Usuário e imprime da tela do usuário, possibilitando Editar e Excluir qualquer transação.
+  
+### /despesas :
+ #### "GET":
+  Executa uma busca no banco de dados de todas as transações no formado de Despesas ligadas ao ID do Usuário e imprime da tela do usuário, possibilitando Editar e Excluir qualquer transação.
+  
+### /receitas/delete/t_number :
+ #### "POST":
+  Endpoint definido onde "t_number" é o ID de Transação para cada receita ou despesa. Após ser requisitado esse endpoint no metódo POST, o aplicativo entende que é pra deletar a transação com o "t_number" retornado na URL.
+ 
+### /receitas/update/t_number :
+ #### "POST":
+  Endpoint definido onde "t_number" é o ID de Transação para cada receita ou despesa. Após ser requisitado esse endpoint no metódo POST, o aplicativo entende que é pra editar a transação com o "t_number" retornado na URL.
+
+### /despesas/delete/t_number :
+ #### "POST":
+  Endpoint definido onde "t_number" é o ID de Transação para cada receita ou despesa. Após ser requisitado esse endpoint no metódo POST, o aplicativo entende que é pra deletar a transação com o "t_number" retornado na URL.
+
+### /receitas/update/t_number :
+ #### "POST":
+  Endpoint definido onde "t_number" é o ID de Transação para cada receita ou despesa. Após ser requisitado esse endpoint no metódo POST, o aplicativo entende que é pra editar a transação com o "t_number" retornado na URL.
   
   
 ## Dificuldades no Projeto:
